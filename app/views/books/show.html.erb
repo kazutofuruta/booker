@@ -1,0 +1,21 @@
+<font color="#00CC00"><%= flash[:notice] %></font>
+
+<table>
+	<tr>
+		<th><h4>Title:</h4></th>
+
+        <th><span><%= @book.title %></span></th>
+    </tr>
+
+    <tr>
+    	<td><h4>Body:</h4></td>
+
+        <td><body> <%= @book.body %> </body></td>
+    </tr>
+
+
+</table>
+
+<%= link_to "Edit", edit_book_path, class:'edit_#{id}' %>
+<span>|</span>
+<%= link_to "Back", books_path, class:"back" %>
